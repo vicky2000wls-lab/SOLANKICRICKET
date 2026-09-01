@@ -1,0 +1,23 @@
+SOLANKICRICKET — MOBILE GITHUB BUILD
+
+1. On your Android phone open github.com in Chrome.
+2. Create/sign in to your GitHub account.
+3. Create a NEW repository, e.g. SOLANKICRICKET.
+4. Upload ALL files and folders from this project ZIP. Keep the folder structure:
+   app/
+   build.gradle
+   settings.gradle
+   gradle.properties
+   .github/workflows/android-build.yml
+5. Commit the files to the main branch.
+6. Open the repository -> Actions -> "SOLANKICRICKET Android Build".
+7. Tap "Run workflow" (or push to main).
+8. Wait for the workflow to finish.
+9. Open the completed workflow run -> Artifacts.
+10. Download SOLANKICRICKET-debug-apk for testing.
+11. For Play Store, download the release AAB artifact after adding proper release signing.
+
+IMPORTANT:
+- The debug APK is for installation/testing and is not the correct Play Store release.
+- Google Play requires a properly signed Android App Bundle (AAB).
+- Keep your signing keystore and passwords private; never upload them into a public GitHub repository.
