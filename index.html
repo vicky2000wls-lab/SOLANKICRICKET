@@ -3,55 +3,32 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>SOLANKICRICKET</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#101c29;color:#10202d;
-background-image:linear-gradient(rgba(255,255,255,.84),rgba(255,255,255,.84)),url('solanki_cricket_bg.jpg');
-background-size:cover;background-position:center;background-attachment:fixed}header{background:#062e55;color:#fff;padding:14px 16px;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #0004}
-h1{margin:0;font-size:24px}header small{opacity:.85}.wrap{max-width:900px;margin:auto;padding:10px 10px 35px}
-.nav{display:flex;gap:5px;overflow:auto;margin-bottom:8px}.nav button{white-space:nowrap}
-.card{background:#fffffff2;border-radius:16px;padding:14px;margin:10px 0;box-shadow:0 3px 12px #0002}
-input,select{width:100%;padding:11px;border:1px solid #c8d0d7;border-radius:9px;margin:5px 0 9px;background:white}
-button{border:0;border-radius:10px;padding:11px 13px;margin:4px;background:#0759a5;color:white;font-weight:700}
-button.green{background:#087f4e}button.red{background:#b42318}button.alt{background:#e7edf1;color:#13202b}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.row{display:flex;gap:7px}.row>*{flex:1}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#101c29;color:#10202d;background-image:linear-gradient(rgba(255,255,255,.84),rgba(255,255,255,.84)),url('solanki_cricket_bg.jpg');background-size:cover;background-position:center;background-attachment:fixed}
+header{background:#062e55;color:#fff;padding:14px 16px;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #0004}h1{margin:0;font-size:24px}header small{opacity:.85}.wrap{max-width:900px;margin:auto;padding:10px 10px 35px}
+.nav{display:flex;gap:5px;overflow:auto;margin-bottom:8px}.nav button{white-space:nowrap}.card{background:#fffffff2;border-radius:16px;padding:14px;margin:10px 0;box-shadow:0 3px 12px #0002}
+input,select{width:100%;padding:11px;border:1px solid #c8d0d7;border-radius:9px;margin:5px 0 9px;background:white}button{border:0;border-radius:10px;padding:11px 13px;margin:4px;background:#0759a5;color:white;font-weight:700}
+button.green{background:#087f4e}button.red{background:#b42318}button.alt{background:#e7edf1;color:#13202b}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.row{display:flex;gap:7px}.row>*{flex:1}
 .score{background:#062e55;color:white;border-radius:16px;padding:16px;text-align:center}.big{font-size:40px;font-weight:800}.small{font-size:12px;color:#667085}
-.over{display:none;background:#e9f9ef;color:#08733f;border:2px solid #22a06b;border-radius:12px;padding:11px;margin-top:10px;font-weight:800}
-.ball{display:inline-flex;width:33px;height:33px;border-radius:50%;background:#eef2f4;align-items:center;justify-content:center;margin:3px;font-weight:800}
-.hidden{display:none}table{width:100%;border-collapse:collapse}th,td{padding:8px;border-bottom:1px solid #e5e7eb;text-align:left;font-size:13px}
-.badge{display:inline-block;background:#e8f1fb;border-radius:18px;padding:5px 9px;margin:2px;font-size:12px}.danger{color:#b42318}
+.over{display:none;background:#e9f9ef;color:#08733f;border:2px solid #22a06b;border-radius:12px;padding:11px;margin-top:10px;font-weight:800}.ball{display:inline-flex;width:33px;height:33px;border-radius:50%;background:#eef2f4;align-items:center;justify-content:center;margin:3px;font-weight:800}
+.hidden{display:none}table{width:100%;border-collapse:collapse}th,td{padding:8px;border-bottom:1px solid #e5e7eb;text-align:left;font-size:13px}.badge{display:inline-block;background:#e8f1fb;border-radius:18px;padding:5px 9px;margin:2px;font-size:12px}
 </style></head><body>
 <header><h1>🏏 SOLANKICRICKET</h1><small>Play • Score • Manage • Win</small></header>
 <div class="wrap">
 <div class="nav"><button onclick="tab('home')">Home</button><button onclick="tab('teams')">Teams</button><button onclick="tab('match')">Live Match</button><button onclick="tab('scorecard')">Scorecard</button><button onclick="tab('points')">Points</button><button onclick="tab('stats')">Stats</button><button onclick="tab('backup')">Backup</button></div>
-
-<section id="home"><div class="card"><h2>New Tournament</h2>
-<label>Tournament</label><input id="tour" placeholder="SOLANKI CUP">
-<div class="row"><div><label>Team A</label><input id="ta" value="Team A"></div><div><label>Team B</label><input id="tb" value="Team B"></div></div>
-<div class="row"><div><label>Format</label><select id="fmt"><option>T20</option><option>10 Overs</option><option>15 Overs</option><option>50 Overs</option></select></div><div><label>Overs</label><input id="ovr" type="number" value="20" min="1" max="50"></div></div>
-<label>Venue</label><input id="venue" placeholder="Cricket Ground">
-<button class="green" onclick="newTournament()">Create / Reset Tournament</button></div>
+<section id="home"><div class="card"><h2>New Tournament</h2><label>Tournament</label><input id="tour" placeholder="SOLANKI CUP"><div class="row"><div><label>Team A</label><input id="ta" value="Team A"></div><div><label>Team B</label><input id="tb" value="Team B"></div></div><div class="row"><div><label>Format</label><select id="fmt"><option>T20</option><option>10 Overs</option><option>15 Overs</option><option>50 Overs</option></select></div><div><label>Overs</label><input id="ovr" type="number" value="20" min="1" max="50"></div></div><label>Venue</label><input id="venue" placeholder="Cricket Ground"><button class="green" onclick="newTournament()">Create / Reset Tournament</button></div>
 <div class="card"><h3>Included</h3><span class="badge">15 Players / Team</span><span class="badge">Playing XI</span><span class="badge">Ball-by-ball</span><span class="badge">6 legal balls / over</span><span class="badge">Wide/No-ball</span><span class="badge">Scorecard</span><span class="badge">Points</span><span class="badge">Backup</span></div></section>
-
-<section id="teams" class="hidden"><div class="card"><h2>Team & Player Management</h2>
-<select id="teamPick" onchange="renderTeam()"><option value="A">Team A</option><option value="B">Team B</option></select>
-<div class="row"><input id="teamName" placeholder="Team name"><button onclick="saveTeam()">Save Team</button></div>
-<div id="players"></div><button class="green" onclick="savePlayers()">Save 15 Players</button></div></section>
-
+<section id="teams" class="hidden"><div class="card"><h2>Team & Player Management</h2><select id="teamPick" onchange="renderTeam()"><option value="A">Team A</option><option value="B">Team B</option></select><div class="row"><input id="teamName" placeholder="Team name"><button onclick="saveTeam()">Save Team</button></div><div id="players"></div><button class="green" onclick="savePlayers()">Save 15 Players</button></div></section>
 <section id="match" class="hidden"><div class="score"><div id="title">Team A vs Team B</div><div class="big"><span id="R">0</span>/<span id="W">0</span></div><div>Overs <b id="O">0.0</b> • RR <b id="RR">0.00</b></div><div id="overSign" class="over">🏏 OVER COMPLETE<br>6 LEGAL BALLS — SELECT NEXT BOWLER</div></div>
 <div class="card"><div class="row"><div><label>Striker</label><select id="str"></select></div><div><label>Non-striker</label><select id="non"></select></div></div><label>Bowler</label><select id="bowl"></select></div>
-<div class="card"><h3>Live Scoring</h3><div class="grid">
-<button onclick="score(0)">0</button><button onclick="score(1)">1</button><button onclick="score(2)">2</button><button onclick="score(3)">3</button><button onclick="score(4)">4</button><button onclick="score(6)">6</button>
-<button onclick="extra('WD')">Wide</button><button onclick="extra('NB')">No-ball</button><button onclick="extra('B')">Bye</button><button onclick="extra('LB')">Leg-bye</button><button class="red" onclick="out()">Wicket</button><button class="alt" onclick="undo()">Undo</button></div></div>
-<div class="card"><h3>Ball-by-ball</h3><div id="log"></div></div>
-<div class="card"><button class="green" onclick="endInnings()">End Innings</button><button class="red" onclick="newMatch()">New Match</button></div></section>
-
+<div class="card"><h3>Live Scoring</h3><div class="grid"><button onclick="score(0)">0</button><button onclick="score(1)">1</button><button onclick="score(2)">2</button><button onclick="score(3)">3</button><button onclick="score(4)">4</button><button onclick="score(6)">6</button><button onclick="extra('WD')">Wide</button><button onclick="extra('NB')">No-ball</button><button onclick="extra('B')">Bye</button><button onclick="extra('LB')">Leg-bye</button><button class="red" onclick="out()">Wicket</button><button class="alt" onclick="undo()">Undo</button></div></div>
+<div class="card"><h3>Ball-by-ball</h3><div id="log"></div></div><div class="card"><button class="green" onclick="endInnings()">End Innings</button><button class="red" onclick="newMatch()">New Match</button></div></section>
 <section id="scorecard" class="hidden"><div class="card"><h2>Scorecard</h2><div id="sc"></div></div></section>
 <section id="points" class="hidden"><div class="card"><h2>Tournament Points</h2><table><tr><th>Team</th><th>M</th><th>W</th><th>L</th><th>Pts</th></tr><tr><td id="pa">Team A</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td id="pb">Team B</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table></div></section>
 <section id="stats" class="hidden"><div class="card"><h2>Player Statistics</h2><div id="st"></div></div></section>
 <section id="backup" class="hidden"><div class="card"><h2>Backup / Restore</h2><p class="small">Your tournament is stored on this device. Export a backup before changing phones.</p><button class="green" onclick="backup()">Export Backup</button><input type="file" id="restoreFile" accept=".json" onchange="restore(event)"></div><div class="card"><h3>About SOLANKICRICKET</h3><p>Independent cricket tournament scoring app.</p><p class="small">App owner branding: SOLANKI.</p></div></section>
 </div>
 <script>
-const KEY='solankicricket_pro_v1';
-let D=JSON.parse(localStorage.getItem(KEY)||'null')||makeData();
+const KEY='solankicricket_pro_v2';let D=JSON.parse(localStorage.getItem(KEY)||'null')||makeData();
 function makeData(){let d={tour:'SOLANKI CUP',venue:'',overs:20,teams:{A:{name:'Team A',p:[]},B:{name:'Team B',p:[]}},points:{A:[0,0,0,0],B:[0,0,0,0]},inn:null};for(let t of ['A','B'])for(let i=1;i<=15;i++)d.teams[t].p.push('Player '+i);d.inn=makeInn();return d}
 function makeInn(){return {batTeam:'A',runs:0,w:0,legal:0,events:[],bat:{},bowl:{},history:[]}}
 function save(){localStorage.setItem(KEY,JSON.stringify(D))}
@@ -66,14 +43,14 @@ function initPlayers(){for(let n of D.teams.A.p)D.inn.bat[n] ||= {r:0,b:0,f4:0,f
 function fill(id,arr){let s=document.getElementById(id),old=s.value;s.innerHTML=arr.map(x=>`<option>${esc(x)}</option>`).join('');if(old&&arr.includes(old))s.value=old}
 function renderMatch(){initPlayers();document.getElementById('title').textContent=D.teams.A.name+' vs '+D.teams.B.name;R.textContent=D.inn.runs;W.textContent=D.inn.w;O.textContent=Math.floor(D.inn.legal/6)+'.'+D.inn.legal%6;RR.textContent=D.inn.legal?(D.inn.runs/(D.inn.legal/6)).toFixed(2):'0.00';document.getElementById('overSign').style.display=D.inn.legal>0&&D.inn.legal%6===0?'block':'none';fill('str',D.teams.A.p);fill('non',D.teams.A.p);fill('bowl',D.teams.B.p);log.innerHTML=D.inn.events.slice(-40).map(e=>`<span class="ball">${e}</span>`).join('');save()}
 function snapshot(){D.inn.history.push(JSON.stringify({runs:D.inn.runs,w:D.inn.w,legal:D.inn.legal,events:D.inn.events,bat:D.inn.bat,bowl:D.inn.bowl}))}
-function score(r){snapshot();let s=str.value;D.inn.runs+=r;D.inn.legal++;let b=D.inn.bat[s]||(D.inn.bat[s]={r:0,b:0,f4:0,f6:0});b.r+=r;b.b++;if(r===4)b.f4++;if(r===6)b.f6++;let bo=bowl.value;D.inn.bowl[bo]||=(D.inn.bowl[bo]={balls:0,r:0,w:0});D.inn.bowl[bo].balls++;D.inn.bowl[bo].r+=r;D.inn.events.push(String(r));if(r%2){let a=str.value;str.value=non.value;non.value=a}if(D.inn.legal%6===0){let a=str.value;str.value=non.value;non.value=a}save();renderMatch()}
-function extra(t){snapshot();D.inn.runs++;if(t==='WD'||t==='NB'){let bo=bowl.value;D.inn.bowl[bo]||=(D.inn.bowl[bo]={balls:0,r:0,w:0});D.inn.bowl[bo].r++;}else{D.inn.legal++;let bo=bowl.value;D.inn.bowl[bo]||=(D.inn.bowl[bo]={balls:0,r:0,w:0});D.inn.bowl[bo].balls++;D.inn.bowl[bo].r++}D.inn.events.push(t);save();renderMatch()}
-function out(){snapshot();let s=str.value;D.inn.w++;D.inn.legal++;let b=D.inn.bat[s]||(D.inn.bat[s]={r:0,b:0,f4:0,f6:0});b.b++;let bo=bowl.value;D.inn.bowl[bo]||=(D.inn.bowl[bo]={balls:0,r:0,w:0});D.inn.bowl[bo].balls++;D.inn.bowl[bo].w++;D.inn.events.push('W');save();renderMatch()}
-function undo(){let h=D.inn.history.pop();if(!h){alert('Nothing to undo');return}let x=JSON.parse(h);Object.assign(D.inn,x);save();renderMatch()}
+function score(r){snapshot();let s=document.getElementById('str').value;D.inn.runs+=r;D.inn.legal++;let b=D.inn.bat[s]||(D.inn.bat[s]={r:0,b:0,f4:0,f6:0});b.r+=r;b.b++;if(r===4)b.f4++;if(r===6)b.f6++;let bo=document.getElementById('bowl').value;D.inn.bowl[bo]||=(D.inn.bowl[bo]={balls:0,r:0,w:0});D.inn.bowl[bo].balls++;D.inn.bowl[bo].r+=r;D.inn.events.push(String(r));if(r%2){let a=document.getElementById('str').value;document.getElementById('str').value=document.getElementById('non').value;document.getElementById('non').value=a}if(D.inn.legal%6===0){let a=document.getElementById('str').value;document.getElementById('str').value=document.getElementById('non').value;document.getElementById('non').value=a}save();renderMatch()}
+function extra(t){snapshot();D.inn.runs++;let bo=document.getElementById('bowl').value;D.inn.bowl[bo]||=(D.inn.bowl[bo]={balls:0,r:0,w:0});D.inn.bowl[bo].r++;if(t==='WD'||t==='NB'){}else{D.inn.legal++;D.inn.bowl[bo].balls++}D.inn.events.push(t);save();renderMatch()}
+function out(){snapshot();let s=document.getElementById('str').value;D.inn.w++;D.inn.legal++;let b=D.inn.bat[s]||(D.inn.bat[s]={r:0,b:0,f4:0,f6:0});b.b++;let bo=document.getElementById('bowl').value;D.inn.bowl[bo]||=(D.inn.bowl[bo]={balls:0,r:0,w:0});D.inn.bowl[bo].balls++;D.inn.bowl[bo].w++;D.inn.events.push('W');save();renderMatch()}
+function undo(){let h=D.inn.history.pop();if(!h){alert('Nothing to undo');return}Object.assign(D.inn,JSON.parse(h));save();renderMatch()}
 function endInnings(){alert('Innings ended. Scorecard updated.');tab('scorecard')}
-function renderSC(){initPlayers();let h=`<h3>${esc(D.teams.A.name)} — ${D.inn.runs}/${D.inn.w} (${Math.floor(D.inn.legal/6)}.${D.inn.legal%6} overs)</h3><table><tr><th>Batsman</th><th>R</th><th>B</th><th>4s</th><th>6s</th><th>SR</th></tr>`;for(let [n,b] of Object.entries(D.inn.bat)){if(b.b||b.r)h+=`<tr><td>${esc(n)}</td><td>${b.r}</td><td>${b.b}</td><td>${b.f4}</td><td>${b.f6}</td><td>${b.b?(b.r/b.b*100).toFixed(1):'0.0'}</td></tr>`}h+='</table><h3>Bowling</h3><table><tr><th>Bowler</th><th>O</th><th>R</th><th>W</th><th>Econ</th></tr>';for(let [n,b] of Object.entries(D.inn.bowl)){if(b.balls||b.r||b.w)h+=`<tr><td>${esc(n)}</td><td>${Math.floor(b.balls/6)}.${b.balls%6}</td><td>${b.r}</td><td>${b.w}</td><td>${b.balls?(b.r/(b.balls/6)).toFixed(2):'0.00'}</td></tr>`}h+='</table>';sc.innerHTML=h}
-function renderStats(){let h='<table><tr><th>Player</th><th>Runs</th><th>Balls</th><th>SR</th></tr>';for(let [n,b] of Object.entries(D.inn.bat)){h+=`<tr><td>${esc(n)}</td><td>${b.r}</td><td>${b.b}</td><td>${b.b?(b.r/b.b*100).toFixed(1):'0.0'}</td></tr>`}h+='</table>';st.innerHTML=h}
+function renderSC(){initPlayers();let h=`<h3>${esc(D.teams.A.name)} — ${D.inn.runs}/${D.inn.w} (${Math.floor(D.inn.legal/6)}.${D.inn.legal%6} overs)</h3><table><tr><th>Batsman</th><th>R</th><th>B</th><th>4s</th><th>6s</th><th>SR</th></tr>`;for(let [n,b] of Object.entries(D.inn.bat)){if(b.b||b.r)h+=`<tr><td>${esc(n)}</td><td>${b.r}</td><td>${b.b}</td><td>${b.f4}</td><td>${b.f6}</td><td>${b.b?(b.r/b.b*100).toFixed(1):'0.0'}</td></tr>`}h+='</table><h3>Bowling</h3><table><tr><th>Bowler</th><th>O</th><th>R</th><th>W</th><th>Econ</th></tr>';for(let [n,b] of Object.entries(D.inn.bowl)){if(b.balls||b.r||b.w)h+=`<tr><td>${esc(n)}</td><td>${Math.floor(b.balls/6)}.${b.balls%6}</td><td>${b.r}</td><td>${b.w}</td><td>${b.balls?(b.r/(b.balls/6)).toFixed(2):'0.00'}</td></tr>`}h+='</table>';document.getElementById('sc').innerHTML=h}
+function renderStats(){let h='<table><tr><th>Player</th><th>Runs</th><th>Balls</th><th>SR</th></tr>';for(let [n,b] of Object.entries(D.inn.bat)){h+=`<tr><td>${esc(n)}</td><td>${b.r}</td><td>${b.b}</td><td>${b.b?(b.r/b.b*100).toFixed(1):'0.0'}</td></tr>`}h+='</table>';document.getElementById('st').innerHTML=h}
 function backup(){let blob=new Blob([JSON.stringify(D,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='SOLANKICRICKET_backup.json';a.click()}
-function restore(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{D=JSON.parse(r.result);save();alert('Backup restored');tab('home')}catch(_){alert('Invalid backup')}};r.readAsText(f)}
+function restore(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{D=JSON.parse(r.result);save();alert('Backup restored');tab('home')}catch(_){alert('Invalid backup')}};r.readAsText()}
 renderMatch();
 </script></body></html>

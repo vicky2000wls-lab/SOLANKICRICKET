@@ -9,6 +9,7 @@ import android.graphics.Color;
 
 public class MainActivity extends Activity {
     private WebView webView;
+
     @Override public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         webView = new WebView(this);
@@ -22,7 +23,9 @@ public class MainActivity extends Activity {
         webView.loadUrl("file:///android_asset/index.html");
         setContentView(webView);
     }
+
     @Override public void onBackPressed() {
-        if (webView.canGoBack()) webView.goBack(); else super.onBackPressed();
+        if (webView.canGoBack()) webView.goBack();
+        else super.onBackPressed();
     }
 }
